@@ -73,6 +73,15 @@
       showConfirm() {
         this.$refs.confirm.show()
       },
+      onQueryChange() {
+        this.query = 'query'
+      },
+      blurInput() {
+        this.$refs.searchBox.blur()
+      },
+      saveSearch() {
+      //
+    },
       _getHotKey() {
         getHotKey().then((res) => {
           if (res.code === ERR_OK) {
@@ -81,7 +90,8 @@
         })
       },
       ...mapActions([
-        'clearSearchHistory'
+        'clearSearchHistory',
+        'saveSearchAction'
       ])
     },
     watch: {
