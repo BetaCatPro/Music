@@ -50,7 +50,7 @@
     data() {
       return {
         hotKey: [],
-        query
+        query: ''
       }
     },
     computed: {
@@ -66,7 +66,7 @@
     },
     methods: {
       addQuery() {
-        this.$refs.searchBox.setQuery(query)
+        this.$refs.searchBox.setQuery(this.query)
       },
       handlePlaylist(playlist) {
         const bottom = playlist.length > 0 ? '60px' : ''
@@ -99,7 +99,7 @@
       ...mapActions([
         'saveSearchHistory',
         'deleteSearchHistory',
-        'clearSearchHistory',
+        'clearSearchHistory'
       ])
     },
     watch: {
