@@ -34,7 +34,7 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script type="">
   import SearchBox from 'base/search-box/search-box'
   import SearchList from 'base/search-list/search-list'
   import Scroll from 'base/scroll/scroll'
@@ -43,16 +43,20 @@
   import {getHotKey} from 'api/search'
   import {ERR_OK} from 'api/config'
   import {playlistMixin, searchMixin} from 'common/js/mixin'
-  import {mapActions} from 'vuex'
+  import {mapActions, mapGetters} from 'vuex'
 
   export default {
     mixins: [playlistMixin, searchMixin],
     data() {
       return {
-        hotKey: []
+        hotKey: [],
+        query
       }
     },
     computed: {
+      ...mapGetters([
+        'searchHistory'
+      ]),
       shortcut() {
         return this.hotKey.concat(this.searchHistory)
       }
@@ -61,6 +65,9 @@
       this._getHotKey()
     },
     methods: {
+      addQuery() {
+        this.$refs.searchBox.setQuery(query)
+      },
       handlePlaylist(playlist) {
         const bottom = playlist.length > 0 ? '60px' : ''
 
@@ -80,8 +87,8 @@
         this.$refs.searchBox.blur()
       },
       saveSearch() {
-      //
-    },
+        this.saveSearchHistory(this.query)
+      },
       _getHotKey() {
         getHotKey().then((res) => {
           if (res.code === ERR_OK) {
@@ -90,8 +97,9 @@
         })
       },
       ...mapActions([
+        'saveSearchHistory',
+        'deleteSearchHistory',
         'clearSearchHistory',
-        'saveSearchAction'
       ])
     },
     watch: {
