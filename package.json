@@ -2,7 +2,11 @@
   "name": "vue-music",
   "version": "1.0.0",
   "description": "音乐播放器",
+<<<<<<< HEAD
   "author": "BetaCatPro <zj20162325@163.com>",
+=======
+  "author": "zhangjin <zj20162325@163.com>",
+>>>>>>> 49ba66b03cb9d43560f3575568aece853ea65c04
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
