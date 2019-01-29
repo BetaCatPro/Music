@@ -136,31 +136,31 @@
 │       ├── mutations.js
 │       └── state.js
 └── static
-    ├── 1.png
-    ├── 2.png
-    ├── 3.png
-    ├── 4.png
-    └── 5.png
+    ├── 首页.png
+    ├── 歌手.png
+    ├── 歌单排行.png
+    ├── 搜索.png
+    └── 播放器.png
 
 ```
 
 ## 项目截图
 
-![image](https://github.com/BetaCatPro/music/blob/master/static/1.png)
+![image](https://github.com/BetaCatPro/music/blob/master/static/首页.png)
 
-![image](https://github.com/BetaCatPro/music/blob/master/static/2.png)
+![image](https://github.com/BetaCatPro/music/blob/master/static/歌手.png)
 
-![image](https://github.com/BetaCatPro/music/blob/master/static/3.png)
+![image](https://github.com/BetaCatPro/music/blob/master/static/歌单排行.png)
 
-![image](https://github.com/BetaCatPro/music/blob/master/static/4.png)
+![image](https://github.com/BetaCatPro/music/blob/master/static/搜索.png)
 
-![image](https://github.com/BetaCatPro/music/blob/master/static/5.png)
+![image](https://github.com/BetaCatPro/music/blob/master/static/播放器.png)
 
 
 ### 安装与运行
 
 ```
-git clone https://github.com/BetaCatPro/vue-music.git
+git clone https://github.com/BetaCatPro/music.git
 
 cd vue-music
 
@@ -169,6 +169,4 @@ npm install
 npm run dev //服务端运行 访问 http://localhost:8080
 
 npm run build 项目打包
-
-感兴趣的童鞋可以来个star
 
