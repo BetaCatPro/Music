@@ -160,7 +160,7 @@
 ### 安装与运行
 
 ```
-git clone https://github.com/BetaCatPro/music.git
+git clone https://github.com/BetaCatPro/Music.git
 
 cd vue-music
 
